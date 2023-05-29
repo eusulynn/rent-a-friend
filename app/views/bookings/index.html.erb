@@ -1,0 +1,11 @@
+<h1>My Bookings</h1>
+<% current_user = User.find(1) %>
+
+<% if !current_user.nil? %>
+  <% @bookings.each do |booking| %>
+    <p>Booked with: <%= booking.friend.name %></p>
+    <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+  <% end %>
+<% else %>
+  <p>You are not logged in</p>
+<% end %>
