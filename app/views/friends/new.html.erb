@@ -1,0 +1,12 @@
+<div class="container">
+<p> add simple form here this form is for user to input info to become a friend on the marketplace</p>
+  <%= simple_form_for(@friend) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :price %>
+    <%= f.input :age %>
+    <%= f.input :gender %>
+    <%= f.input :language %>
+    <%= f.submit %>
+  <% end %>
+</div>
