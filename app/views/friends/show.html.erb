@@ -5,4 +5,7 @@
   <p>Hello everyone! This is our friend <%= @friend.name %>!
   <%= @friend.name %> is a really fun person.
   <%= @friend.name %> would love to get to know you and hang out sometime!</p>
+  <% if @friend.user == current_user%>
+    <%= link_to "I don't want to be a friend anymore:(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
+  <% end %>
 </div>

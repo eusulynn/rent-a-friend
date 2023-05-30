@@ -16,7 +16,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def create
     @friend = Friend.new(friend_params)
     @friend.user = current_user
-    current_user = nil
     if @friend.save
       redirect_to friend_path(@friend)
     else
