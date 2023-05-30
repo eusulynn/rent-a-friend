@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Make a new booking</h1>
+  <%= link_to "< Back to my bookings", bookings_path %>
   <%= simple_form_for @booking do |form| %>
   <%=   form.association :friend %>
   <%=   form.input :start_date %>

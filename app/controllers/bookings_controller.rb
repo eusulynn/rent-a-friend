@@ -1,8 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    current_user = User.find(1)
-
-    if !current_user.nil?
+    if user_signed_in?
       @bookings = Booking.where(user_id: current_user.id)
     else
       @bookings = nil
