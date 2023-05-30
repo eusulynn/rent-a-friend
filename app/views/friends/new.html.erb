@@ -1,5 +1,6 @@
 <div class="container">
-<p> add simple form here this form is for user to input info to become a friend on the marketplace</p>
+  <h1>Add a new friend!</h1>
+  <%= link_to "< Cancel", friends_path %>
   <%= simple_form_for(@friend) do |f| %>
     <%= f.input :name %>
     <%= f.input :location %>
@@ -7,6 +8,7 @@
     <%= f.input :age %>
     <%= f.input :gender %>
     <%= f.input :language %>
-    <%= f.submit %>
+    <%= f.input :description %>
+    <%= f.submit class: "btn btn-primary" %>
   <% end %>
 </div>
