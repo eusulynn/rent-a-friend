@@ -1,7 +1,21 @@
-<h1>My Bookings</h1>
-<%= link_to "Make a new booking", new_booking_path %>
-<% @bookings.each do |booking| %>
-  <p>Booked with: <%= booking.friend.name %></p>
-  <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
-  <%= link_to "Cancel booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
-<% end %>
+<div class="container">
+  <div class="title">
+    <h1>My Bookings</h1>
+  </div>
+
+    <%= link_to "Make a new booking", new_booking_path, class: "btn btn-primary" %>
+
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+    <div class="card">
+      <div class="card-content">
+      <h2>Booked with: <%= booking.friend.name %></h2>
+      <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+      <%= link_to "Cancel booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
+      </div>
+    <div>
+
+    <% end %>
+  </div>
+</div>
+ n
