@@ -1,5 +1,6 @@
 <div class="show-container">
   <h1><%= @friend.name %></h1>
+  <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
   <%= link_to "< Back", friends_path %>
   <p>Age: <%= @friend.age %></p>
   <p>Gender: <%= @friend.gender %></p>
