@@ -32,6 +32,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   private
   def friend_params
-    params.require(:friend).permit(:location, :price, :name, :age, :gender, :language)
+    params.require(:friend).permit(:location, :price, :name, :age, :gender, :language, :photo)
   end
 end
