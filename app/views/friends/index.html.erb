@@ -3,7 +3,7 @@
     <h1>All Friends</h1>
   </div>
 
-  <div class="friends-container">
+  <div class="container">
     <ul>
       <% @friends.each do |friend| %>
         <li><%= link_to friend.name, friend_path(friend) %> </li>
