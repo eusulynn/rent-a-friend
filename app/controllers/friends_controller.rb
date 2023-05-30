@@ -1,4 +1,14 @@
 class FriendsController < ApplicationController
+skip_before_action :authenticate_user!, only: [:index, :show]
+
+  def index
+    @friends = Friend.all
+  end
+
+  def show
+    @friend = Friend.find(params[:id])
+  end
+
   def new
     @friend = Friend.new
   end
@@ -19,11 +29,10 @@ class FriendsController < ApplicationController
       @friend.destroy
       redirect_to friends_path
     end
-  
+
 
   private
   def friend_params
     params.require(:friend).permit(:location, :price, :name, :age, :gender, :language)
   end
-
 end

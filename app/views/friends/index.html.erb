@@ -1,0 +1,8 @@
+<div class="class">
+<h1>All Friends</h1>
+
+  <% @friends.each do |friend| %>
+    <%= link_to friend.name, friend_path(friend) %>
+  <% end %>
+
+</div>
