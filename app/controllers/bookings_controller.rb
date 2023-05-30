@@ -13,10 +13,10 @@ class BookingsController < ApplicationController
 
   def create
     booking = Booking.new(booking_params)
-    friend = Friend.find(params[:friend_id])
+    friend = Friend.find(params[:booking][:friend_id])
 
     booking.friend = friend
-    booking.user = current_user
+    booking.user_id = current_user.id
 
     if booking.save!
       redirect_to bookings_path
