@@ -9,9 +9,11 @@
 
   <div class="cards">
     <% @bookings.each do |booking| %>
-    <div class="card-content">
+    <div class="card">
+      <div class="card-content">
       <h2>Booked with: <%= booking.friend.name %></h2>
       <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+      </div>
     <div>
     <div class="card-button">
       <%= link_to "Cancel booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
