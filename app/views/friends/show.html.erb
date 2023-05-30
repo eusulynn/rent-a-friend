@@ -1,11 +1,13 @@
-
-<div class="w-50">
+<div class="container">
   <h1><%= @friend.name %></h1>
+  <%= link_to "< Back", friends_path %>
+  <p>Age: <%= @friend.age %></p>
+  <p>Gender: <%= @friend.gender %></p>
+  <p>Price: <%= @friend.language %></p>
+  <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
+  <p><%= @friend.description %>
 
-  <p>Hello everyone! This is our friend <%= @friend.name %>!
-  <%= @friend.name %> is a really fun person.
-  <%= @friend.name %> would love to get to know you and hang out sometime!</p>
   <% if @friend.user == current_user%>
-    <%= link_to "I don't want to be a friend anymore:(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
+    <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
   <% end %>
 </div>
