@@ -6,8 +6,8 @@
     <%= f.input :location %>
     <%= f.input :price %>
     <%= f.input :age %>
-    <%= f.input :gender %>
-    <%= f.input :language %>
+    <%= f.input :gender, collection: Friend::GENDER_OPTIONS %>
+    <%= f.input :language, collection: Friend::LANGUAGE_OPTIONS %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>
     <%= f.submit class: "btn btn-primary" %>
