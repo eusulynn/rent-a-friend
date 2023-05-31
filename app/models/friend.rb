@@ -15,9 +15,9 @@ class Friend < ApplicationRecord
   validates :gender, presence: true, inclusion: { in: GENDER_OPTIONS }
   validates :language, presence: true, inclusion: { in: LANGUAGE_OPTIONS }
   validates :description, presence: true, length: { minimum: 5, maximum: 1000 }
-  validates :photo, presence: true
+  # validates :photo, presence: true
 
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
 end
