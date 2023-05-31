@@ -1,7 +1,12 @@
 .primary-button {
-  color: white;
+  color: $dark-blue;
   background-color: $light-green;
   text-decoration: none;
   padding: 10px;
   border-radius: 4px;
+
+  &:hover {
+    color: black;
+    background-color: $light-green-hover;
+  }
 }
