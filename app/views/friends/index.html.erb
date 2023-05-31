@@ -1,14 +1,28 @@
-<div class="container">
-  <div class="title">
-    <h1>All Friends</h1>
+<div class="friends-index-page">
+  <div class="friends-semi-circle">
   </div>
-
-  <div class="container">
-    <ul>
-      <% @friends.each do |friend| %>
-        <li><%= link_to friend.name, friend_path(friend) %> </li>
+  <div class="friend-cards">
+      <% @friends.each_with_index do |friend, index| %>
+        <% if index.even? %>
+          <div class="friend-card left-align">
+            <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
+            <div class="friend-overview">
+              <%= link_to friend.name, friend_path(friend) %>
+              <p><%= friend.description %></p>
+            </div>
+          </div>
+        <% else %>
+          <div class="friend-card right-align">
+            <div class="friend-overview">
+              <%= link_to friend.name, friend_path(friend) %>
+              <p><%= friend.description %></p>
+            </div>
+            <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
+          </div>
+          <% end %>
       <% end %>
-    </ul>
   </div>
-<%= link_to "Become a Friend!",  new_friend_path, class: "btn btn-primary" %>
+  <div class="friends-index-map">
+    <h1>Rent a<br>Friend</h1>
+  </div>
 </div>
