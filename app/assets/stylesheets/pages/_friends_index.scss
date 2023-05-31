@@ -44,11 +44,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 3em;
+  gap: 2em;
 }
 
 .friend-overview {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   a {
     color: white;
     font-size: 32px;
@@ -68,5 +68,6 @@
     font-family: Helvetica, sans-serif;
     font-size: 128px;
     font-weight: bold;
+    line-height: 0.85;
   }
 }
