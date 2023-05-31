@@ -33,6 +33,9 @@ gem "devise"
 # Cloudinary for storing Friend images and uploading new ones
 gem "cloudinary"
 
+# Geocoding Gem
+gem "geocoder"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
