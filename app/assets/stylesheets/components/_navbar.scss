@@ -1,13 +1,17 @@
-.navbar {
+.navbar-custom {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  background: $dark-blue;
+  color: white;
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 
-.navbar .navbar-collapse {
-  flex-grow: 0;
+.navbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
