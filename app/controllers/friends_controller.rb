@@ -3,6 +3,13 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @friends = Friend.all
+     # The `geocoded` scope filters only friends with coordinates
+    @markers = @friends.geocoded.map do |friend|
+      {
+        lat: friend.latitude,
+        lng: friend.longitude
+      }
+    end
   end
 
   def show
