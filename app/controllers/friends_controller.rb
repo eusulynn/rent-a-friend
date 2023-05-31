@@ -7,7 +7,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @markers = @friends.geocoded.map do |friend|
       {
         lat: friend.latitude,
-        lng: friend.longitude
+        lng: friend.longitude,
+        image_url: friend.photo
       }
     end
   end

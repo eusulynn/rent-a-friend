@@ -22,14 +22,24 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
     #addMarkersToMap() {
+
       this.markersValue.forEach((marker) => {
-        // const customMarker = document.createElement("div")
-        // customMarker.className = "marker"
-        // customMarker.style.backgroundImage = `url()`
         new mapboxgl.Marker()
-          .setLngLat([ marker.lng, marker.lat ])
-          .addTo(this.map)
-      })
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(this.map)
+    })
+
+      // const customMarker = document.createElement("div");
+      // customMarker.className = "marker";
+      // customMarker.style.backgroundImage = `url('${marker.image_url}')`;
+      // customMarker.style.backgroundSize = "cover";
+      // customMarker.style.width = "35px";
+      // customMarker.style.height = "45px";
+
+      // new mapboxgl.Marker(customMarker)
+      //   .setLngLat([marker.lng, marker.lat])
+      //   .addTo(this.map)
+      //   .setPopup(popup);
     }
     #fitMapToMarkers() {
       const bounds = new mapboxgl.LngLatBounds()
