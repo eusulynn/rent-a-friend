@@ -1,6 +1,6 @@
 .friends-index-page {
   display: flex;
-  height: 85vh;
+  height: 90vh;
 }
 
 .friends-semi-circle {
@@ -60,8 +60,10 @@
 .friends-index-map {
   display: flex;
   width: 60%;
+  height: 100%;
   align-items: center;
   justify-content: center;
+  z-index: -2;
 
   h1 {
     color: $dark-blue;
@@ -69,5 +71,6 @@
     font-size: 128px;
     font-weight: bold;
     line-height: 0.85;
+    z-index: 1;
   }
 }
