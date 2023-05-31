@@ -14,5 +14,6 @@ class Friend < ApplicationRecord
   validates :age, presence: true, numericality: { in: (18..100), only_integer: true }
   validates :gender, presence: true, inclusion: { in: GENDER_OPTIONS }
   validates :language, presence: true, inclusion: { in: LANGUAGE_OPTIONS }
-  validates :description, presence: true
+  validates :description, presence: true, length: { minimum: 5, maximum: 1000 }
+  validates :photo, presence: true
 end

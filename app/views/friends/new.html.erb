@@ -8,7 +8,7 @@
     <%= f.input :age %>
     <%= f.input :gender, collection: Friend::GENDER_OPTIONS %>
     <%= f.input :language, collection: Friend::LANGUAGE_OPTIONS %>
-    <%= f.input :description %>
+    <%= f.input :description, as: :text %>
     <%= f.input :photo, as: :file %>
     <%= f.submit class: "btn btn-primary" %>
   <% end %>
