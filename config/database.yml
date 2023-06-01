@@ -82,3 +82,5 @@ test:
 production:
   <<: *default
   database: rent_a_friend_production
+  username: rent_a_friend
+  password: <%= ENV["RENT_A_FRIEND_DATABASE_PASSWORD"] %>
