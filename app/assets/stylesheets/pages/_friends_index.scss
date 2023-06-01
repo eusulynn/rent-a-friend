@@ -70,9 +70,33 @@
 
   h1 {
     color: $dark-blue;
-    font-size: 128px;
+    font-size: 13em;
     font-weight: bold;
     line-height: 0.85;
-    z-index: 1;
+    animation: disappear 5s ease-in-out;
+    // animation: send-to-hell 5s linear;
+    opacity: 0;
+    z-index: 2;
   }
 }
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// @keyframes send-to-hell {
+//   0% {
+//     z-index: 10;
+//   }
+//   100% {
+//     z-index: -1;
+//   }
+// }
