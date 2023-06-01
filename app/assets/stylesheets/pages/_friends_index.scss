@@ -73,22 +73,24 @@
     font-size: 13em;
     font-weight: bold;
     line-height: 0.85;
-    animation: disappear 5s ease-in-out;
+    animation: disappear 5s forwards;
     // animation: send-to-hell 5s linear;
+    z-index: -2;
     opacity: 0;
-    z-index: 2;
   }
 }
 
 @keyframes disappear {
   0% {
     opacity: 1;
+    z-index: 1000;
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    z-index: -2
   }
 }
 
