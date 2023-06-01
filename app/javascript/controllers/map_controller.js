@@ -41,8 +41,8 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const customMarker = document.createElement('div')
-      customMarker.style.height = "30px"
-      customMarker.style.width = "30px"
+      customMarker.style.height = "45px"
+      customMarker.style.width = "45px"
       customMarker.style.borderRadius = "50%"
       customMarker.style.border = "2px solid #ffffff";
       customMarker.style.boxShadow = "0px 2px 4px rgba(0, 0, 0, 0.25)";
