@@ -2,7 +2,7 @@
   <h2 class="login-title">Make a new booking</h2>
   <%= simple_form_for @booking do |form| %>
   <div class="form-transparent">
-    <%=   form.association :friend %>
+    <%=   form.association :friend, selected: params[:friend] %>
     <%=   form.input :start_date %>
     <%=   form.input :end_date %>
     <%=   form.button :submit, class: "login-button" %>
