@@ -43,9 +43,14 @@ export default class extends Controller {
       const customMarker = document.createElement('div')
       customMarker.style.height = "30px"
       customMarker.style.width = "30px"
-      customMarker.style.backgroudColor = "blue"
+      customMarker.style.borderRadius = "50%"
+      customMarker.style.border = "2px solid #ffffff";
+      customMarker.style.boxShadow = "0px 2px 4px rgba(0, 0, 0, 0.25)";
+      customMarker.style.backgroundImage = `url('${marker.image_url}')`
+      customMarker.style.backgroundSize = "contain"
 
-      new mapboxgl.Marker()
+      console.log(customMarker)
+      new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)
     })
