@@ -1,5 +1,5 @@
-<div class="container-center">
-  <h2 class="login-title">Add a new friend!</h2>
+<div class="container-center-dark">
+  <h2 class="form-title">Add a new friend!</h2>
   <%= simple_form_for(@friend) do |f| %>
   <div class="form-transparent">
     <%= f.input :name %>
@@ -10,7 +10,7 @@
     <%= f.input :language, collection: Friend::LANGUAGE_OPTIONS %>
     <%= f.input :description, as: :text %>
     <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: "login-button" %>
+    <%= f.button :submit, class: "form-button" %>
   <%= link_to "< Cancel", friends_path %>
   </div>
   <% end %>
