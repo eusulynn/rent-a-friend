@@ -10,3 +10,18 @@
     background-color: $light-green-hover;
   }
 }
+
+.login-button {
+  color: $dark-blue;
+  background-color: $light-green;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  &:hover {
+    color: black;
+    background-color: $light-green-hover;
+  }
+}
