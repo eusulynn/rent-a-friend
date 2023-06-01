@@ -7,7 +7,7 @@ ariola.photo.attach(io: File.open('app/assets/images/avatars/Ariola.jpeg'), file
 kris = Friend.create(name: "Kris Chan", age: 29, gender: "Female", location: "Hong Kong", price: rand(10..45), language: "English", user_id: 2, description: "I previously worked in digital marketing and would like to try out web development after I found out I was the one people turn to when there are projects involving a new website. If I was doing it, I would like to be really good at it. And this brings me here :)")
 kris.photo.attach(io: File.open('app/assets/images/avatars/Kris.jpeg'), filename: "Kris.jpeg", content_type: "image/jpeg")
 
-louisc = Friend.create(name: "Louis Clermont", age: 32, gender: "Male", location: "London", price: rand(10..45), language: "French", user_id: 2, description: "I'm a student in Business and Finance at Bayes Business School. I just finished an internship of 3 months in a PE fund. I'm currently creating my own startup.")
+louisc = Friend.create(name: "Louis Clermont", age: 32, gender: "Male", location: "France", price: rand(10..45), language: "French", user_id: 2, description: "I'm a student in Business and Finance at Bayes Business School. I just finished an internship of 3 months in a PE fund. I'm currently creating my own startup.")
 louisc.photo.attach(io: File.open('app/assets/images/avatars/Louis-C.jpeg'), filename: "Louis-C.jpeg", content_type: "image/jpeg")
 
 olly = Friend.create(name: "Olly Crole", age: 25, gender: "Male", location: "London", price: rand(10..45), language: "English", user_id: 2, description: "A recent graduate of philosophy from The University of Edinburgh. Looking to explore the world of tech and gain web development skills. I would love to eventually use software development in the creative industries and for music equipment.")
@@ -16,7 +16,7 @@ olly.photo.attach(io: File.open('app/assets/images/avatars/Olly.jpeg'), filename
 clara = Friend.create(name: "Clara Dahan", age: 20, gender: "Female", location: "Paris", price: rand(10..45), language: "English", user_id: 2, description: "Studied medicine for a year before deciding to change career paths and wanting to get a more quantitative degree- hoping to learn a lot at le wagon as I currently have no coding skills whatsoever :)")
 clara.photo.attach(io: File.open('app/assets/images/avatars/Clara.jpeg'), filename: "Clara.jpeg", content_type: "image/jpeg")
 
-javier = Friend.create(name: "Javier Debén", age: 21, gender: "Male", location: "London", price: rand(10..45), language: "Spanish", user_id: 2, description: "Did some courses in Spain about programming (java, javascript, etc). Doing a web development course in Le Wagon to improve my knowledge and get to know more people internationally.")
+javier = Friend.create(name: "Javier Debén", age: 21, gender: "Male", location: "Spain", price: rand(10..45), language: "Spanish", user_id: 2, description: "Did some courses in Spain about programming (java, javascript, etc). Doing a web development course in Le Wagon to improve my knowledge and get to know more people internationally.")
 javier.photo.attach(io: File.open('app/assets/images/avatars/Javier.jpeg'), filename: "Javier.jpeg", content_type: "image/jpeg")
 
 su = Friend.create(name: "Su Lynn Eu", age: 26, gender: "Female", location: "London", price: rand(10..45), language: "English", user_id: 2, description: "New to London, new to coding. Past Experience: Dance, Theatre Scene Shop Builder, Backstage Crew, Cafe Management, Liberal Arts Graduate.")
@@ -31,10 +31,10 @@ pierre.photo.attach(io: File.open('app/assets/images/avatars/Pierre.jpeg'), file
 sam = Friend.create(name: "Sam Mayhew", age: 21, gender: "Male", location: "London", price: rand(10..45), language: "English", user_id: 2, description: "Philosophy student at the University of York, originally from Kent, based in London, learning to code to open doors and expand my knowledge. Batch 1230 at Le Wagon London and excited for this new adventure.")
 sam.photo.attach(io: File.open('app/assets/images/avatars/Sam.jpeg'), filename: "Sam.jpeg", content_type: "image/jpeg")
 
-emilia = Friend.create(name: "Emilia Freitaga", age: 28, gender: "Female", location: "London", price: rand(10..45), language: "Russian", user_id: 2, description: "I had been working in the fashion industry for more than 4 years coordinating manufacture processes in luxury companies in London. However, I have recently decided to change my career path and start coding.")
+emilia = Friend.create(name: "Emilia Freitaga", age: 28, gender: "Female", location: "Latvia", price: rand(10..45), language: "Russian", user_id: 2, description: "I had been working in the fashion industry for more than 4 years coordinating manufacture processes in luxury companies in London. However, I have recently decided to change my career path and start coding.")
 emilia.photo.attach(io: File.open('app/assets/images/avatars/Emilia.jpeg'), filename: "Emilia.jpeg", content_type: "image/jpeg")
 
-warren = Friend.create(name: "Warren Wisbeach", age: 36, gender: "Male", location: "London", price: rand(10..45), language: "English", user_id: 2, description: "I'm on an exciting journey to change careers and am really looking forward to joining Le Wagon's latest Web Development Bootcamp.")
+warren = Friend.create(name: "Warren Wisbeach", age: 36, gender: "Male", location: "South Africa", price: rand(10..45), language: "English", user_id: 2, description: "I'm on an exciting journey to change careers and am really looking forward to joining Le Wagon's latest Web Development Bootcamp.")
 warren.photo.attach(io: File.open('app/assets/images/avatars/Warren.jpeg'), filename: "Warren.jpeg", content_type: "image/jpeg")
 
 # ebi = Friend.create(name: "Ebitari Alaibe", age: 82, gender: "Male", location: "London", price: rand(10..45), language: "English", user_id: 2, description: "I just want to drink Tequila tbh")
