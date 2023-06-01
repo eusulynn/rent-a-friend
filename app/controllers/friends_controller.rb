@@ -8,7 +8,9 @@ skip_before_action :authenticate_user!, only: [:index, :show]
       {
         lat: friend.latitude,
         lng: friend.longitude,
-        image_url: friend.photo
+        # image_url: friend.photo
+        # image_url: helpers.asset_url("Alek.jpeg")
+        # Rails.application.routes.url_helpers.asset_url("Alek.jpeg")
       }
     end
   end
