@@ -4,7 +4,8 @@
   <%= link_to "< Back", friends_path %>
   <p>Age: <%= @friend.age %></p>
   <p>Gender: <%= @friend.gender %></p>
-  <p>Price: <%= @friend.language %></p>
+  <p>Price: <span> $<%= @friend.price %></span>
+  <p>About me:</p>
   <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
   <p><%= @friend.description %>
 
