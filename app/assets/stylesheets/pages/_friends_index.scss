@@ -1,12 +1,12 @@
 .friends-index-page {
   display: flex;
-  height: 89dvh;
+  height: 90vh;
 }
 
 .friends-semi-circle {
   position: fixed;
   z-index: 2;
-  top: -25vw;
+  top: -20vw;
   left: -50vw;
   background-color: $dark-blue;
   width: 100vw;
