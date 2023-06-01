@@ -1,0 +1,23 @@
+// .container {
+
+// }
+.img-container {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  
+  p {
+    font-size: 20px;
+  }
+
+}
+.img-container img {
+  // display: flex;
+  // justify-content: flex-end;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}

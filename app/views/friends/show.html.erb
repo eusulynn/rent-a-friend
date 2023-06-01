@@ -1,12 +1,17 @@
 <div class="container">
-  <h1><%= @friend.name %></h1>
-  <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
+  <div class="img-container">
+    <div class="h1">
+      <h1><%= @friend.name %></h1>
+      <p>Description</p>
+      <p>Age: <%= @friend.age %></p>
+      <p>Gender: <%= @friend.gender %></p>
+      <p>Price: <%= @friend.language %></p>
+      <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
+      <p><%= @friend.description %>
+    </div>
+    <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
+  </div>
   <%= link_to "< Back", friends_path %>
-  <p>Age: <%= @friend.age %></p>
-  <p>Gender: <%= @friend.gender %></p>
-  <p>Price: <%= @friend.language %></p>
-  <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
-  <p><%= @friend.description %>
 
   <% if @friend.user == current_user%>
     <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>

@@ -23,21 +23,7 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
-  // #addMarkerToMap() {
-  //   this.markersValue.forEach((marker) => {
-  //     const customMarker = document.createElement("div");
-  //     // customMarker.className = "marker";
-  //     // customMarker.style.backgroundImage = `url('${marker.user.photo_url}')`;
-  //     customMarker.style.backgroundColor = "blue";
-  //     customMarker.style.width = "35px";
-  //     customMarker.style.height = "45px";
 
-  //     const popup = new mapboxgl.Popup().setHTML(maker.info_window)
-  //     new mapboxgl.Marker({element: customMarker})
-  //       .setLngLat([marker.lng, marker.lat])
-  //       .addTo(this.map)
-  //     // .setPopup(popup);
-  // }
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const customMarker = document.createElement('div')
