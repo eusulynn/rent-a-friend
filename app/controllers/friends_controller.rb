@@ -21,7 +21,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
       [{
         lat: @friend.latitude,
         lng: @friend.longitude,
-        image_url: ActionController::Base.helpers.asset_url('Marker')
+        marker_html: render_to_string(partial: "marker")
       }]
   end
 

@@ -1,26 +1,42 @@
 
 .friends-container {
   height: 100%;
-  background: linear-gradient($dark-blue, $dark-blue 45%, #fff 45%, #fff 100%);
+  // background: linear-gradient($dark-blue, $dark-blue 45%, #fff 45%, #fff 100%);
+  position: relative;
+
+
+  .map-mini {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin: 0 auto;
+    z-index: 0;
+  }
 }
+
+
+
 
 .friends-card {
   position: relative;
   display: flex;
   justify-content: center;
   width: 300px;
-  height: 400px;
+  height: 500px;
   background: white;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(1px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   transform: translateX(-50%);
   left: 50%;
-  top:  10%;
+  top: 19%;
   margin-bottom: 100px;
+  z-index: 1;
 }
+
 
 .img-bx {
   position: absolute;
@@ -30,7 +46,7 @@
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  transform: translateY(30px) scale(0.5);
+  transform: translateY(15px) scale(0.6);
   transform-origin: top;
 }
 
@@ -62,23 +78,23 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  color: black;
 }
 
 .content .detail h2 {
-  color: #444;
   font-size: 1.6em;
   font-weight: bolder;
 }
 
 .content .detail p {
-  color: #444;
   font-size: 1em;
   font-weight: lighter;
+  color: black
 }
 
 .content .detail h2 span {
   font-size: 0.7em;
-  color: #03a9f4;
+  color: black;
   font-weight: bold;
 }
 
@@ -93,7 +109,9 @@
 
 
 
-
+.button-show {
+  margin-bottom: 10px;
+}
 // .container {
 //   margin: 0px;
 //   padding: 0px;
