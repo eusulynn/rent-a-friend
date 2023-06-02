@@ -1,24 +1,23 @@
-  <div class="friends-container">
-    <div class="friends-card">
-      <div class="img-bx">
-        <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
-      </div>
-      <div class="content">
-        <div class="detail">
-          <h2><%=@friend.name  %><br /><span> Age: <%= @friend.age %></span><br><span>Price: $<%= @friend.price %></span></h2>
-          <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
-          <%= link_to "Book This Friend!",  new_booking_path(friend: @friend), class: "form-button" %>
-        </div>
-      </div>
-    </div>
-    <div class="description"><h3>"<%= @friend.description %>"</h3></div>
+<div class="friends-container">
   <div class="mapbox map-mini" style="height: 50%; width: 100%;"
-      data-controller="minimap"
-      data-minimap-markers-value="<%= @marker.to_json %>"
-      data-minimap-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        data-controller="minimap"
+        data-minimap-markers-value="<%= @marker.to_json %>"
+        data-minimap-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-  <% if @friend.user == current_user%>
-    <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "form-button button-show" %>
-  <% end %>
-    <br>
+  <div class="friends-card">
+    <%= cl_image_tag @friend.photo.key, class: "avatar-very-large", crop: :fill %>
+    <div class="detail">
+      <h2><%=@friend.name %></h2>
+      <h4>Age: <%= @friend.age %></h2>
+      <h4>Price: $<%= @friend.price %></h2>
+      <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
+      <%= link_to "Book This Friend!",  new_booking_path(friend: @friend), class: "form-button" %>
+      <% if @friend.user == current_user%>
+        <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "form-button button-show" %>
+      <% end %>
+      <p><%= @friend.description %></p>
+    </div>
   </div>
+  <div class='bottom-gradient'>
+  </div>
+</div>
