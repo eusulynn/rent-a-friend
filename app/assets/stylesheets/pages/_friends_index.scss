@@ -73,8 +73,7 @@
     font-size: 13em;
     font-weight: bold;
     line-height: 0.85;
-    animation: disappear 5s forwards;
-    // animation: send-to-hell 5s linear;
+    animation: disappear 10s forwards;
     z-index: -2;
     opacity: 0;
   }
@@ -93,12 +92,3 @@
     z-index: -2
   }
 }
-
-// @keyframes send-to-hell {
-//   0% {
-//     z-index: 10;
-//   }
-//   100% {
-//     z-index: -1;
-//   }
-// }
