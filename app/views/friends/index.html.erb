@@ -8,14 +8,16 @@
           <div class="friend-card left-align">
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
             <div class="friend-overview">
-              <%= link_to friend.name, friend_path(friend) %>
+              <%= link_to "#{friend.name}, #{friend.location}", friend_path(friend) %>
+              <p>Age: <%= friend.age %></p>
               <p><%= friend.description %></p>
             </div>
           </div>
         <% else %>
           <div class="friend-card right-align">
             <div class="friend-overview">
-              <%= link_to friend.name, friend_path(friend) %>
+              <%= link_to "#{friend.name}, #{friend.location}", friend_path(friend) %>
+              <p>Age: <%= friend.age %></p>
               <p><%= friend.description %></p>
             </div>
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
