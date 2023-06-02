@@ -11,10 +11,14 @@
       </div>
     </div>
     <div class="description"><h3>"<%= @friend.description %>"</h3></div>
+  <div class="mapbox" style="height: 500px; width: 100%;"
+      data-controller="minimap"
+      data-minimap-markers-value="<%= @marker.to_json %>"
+      data-minimap-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <% if @friend.user == current_user%>
     <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
   <% end %>
     <br>
     <%= link_to "Book This Friend!",  new_booking_path(friend: @friend), class: "btn btn-primary" %>
-</div>
+  </div>

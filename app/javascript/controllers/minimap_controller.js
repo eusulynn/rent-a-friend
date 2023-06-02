@@ -9,7 +9,7 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("Connected to map controller")
+    console.log("Connected to minimap controller")
 
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -24,6 +24,8 @@ export default class extends Controller {
   }
 
 
+
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const customMarker = document.createElement('div')
@@ -35,12 +37,18 @@ export default class extends Controller {
       customMarker.style.backgroundImage = `url('${marker.image_url}')`
       customMarker.style.backgroundSize = "contain"
 
+      console.log(marker.lng)
+      console.log(marker.lat)
       console.log(customMarker)
       new mapboxgl.Marker(customMarker)
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(this.map)
+      .setLngLat([ marker.lng, marker.lat ])
+      console.log(this.map)
+      // .addTo(this.map)
     })
   }
+
+
+
 
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()

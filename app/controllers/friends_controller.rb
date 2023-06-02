@@ -9,7 +9,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
         lat: friend.latitude,
         lng: friend.longitude,
         # image_url: friend.photo
-        image_url: url_for(friend.photo) 
+        image_url: url_for(friend.photo)
         # Rails.application.routes.url_helpers.asset_url("Alek.jpeg")
       }
     end
@@ -17,6 +17,12 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def show
     @friend = Friend.find(params[:id])
+    @marker =
+      [{
+        lat: @friend.latitude,
+        lng: @friend.longitude,
+        image_url: ActionController::Base.helpers.asset_url('Marker')
+      }]
   end
 
   def new
