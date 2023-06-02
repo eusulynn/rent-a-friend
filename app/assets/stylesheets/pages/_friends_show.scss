@@ -10,6 +10,8 @@
     margin: 0 auto;
     z-index: 0;
     border: none;
+    overflow: hidden;
+    padding: 0;
   }
 
   .bottom-gradient {
@@ -44,6 +46,7 @@
   z-index: 1;
   color: white;
   border: none;
+  text-align: center;
 }
 
 
