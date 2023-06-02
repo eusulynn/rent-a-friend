@@ -2,7 +2,8 @@
   <div class="friends-semi-circle">
   </div>
   <div class="friend-cards">
-      <% @friends.each_with_index do |friend, index| %>
+      <% unless @friends.nil?%>
+        <% @friends.each_with_index do |friend, index|  %>
         <% if index.even? %>
           <div class="friend-card left-align">
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
@@ -20,6 +21,7 @@
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
           </div>
           <% end %>
+        <% end %>
       <% end %>
   </div>
   <div class="friends-index-map"

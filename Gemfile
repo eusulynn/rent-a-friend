@@ -36,6 +36,9 @@ gem "cloudinary"
 # Geocoding Gem
 gem "geocoder"
 
+# Search with PG Search
+gem "pg_search"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
