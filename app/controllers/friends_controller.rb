@@ -7,7 +7,10 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @markers = @friends.geocoded.map do |friend|
       {
         lat: friend.latitude,
-        lng: friend.longitude
+        lng: friend.longitude,
+        # image_url: friend.photo
+        image_url: url_for(friend.photo) 
+        # Rails.application.routes.url_helpers.asset_url("Alek.jpeg")
       }
     end
   end

@@ -1,10 +1,12 @@
-<div class="container">
-  <h1>Make a new booking</h1>
-  <%= link_to "< Back to my bookings", bookings_path %>
+<div class="container-center-dark">
+  <h2 class="form-title">Make a new booking</h2>
   <%= simple_form_for @booking do |form| %>
-  <%=   form.association :friend %>
-  <%=   form.input :start_date %>
-  <%=   form.input :end_date %>
-  <%=   form.submit %>
+  <div class="form-transparent">
+    <%=   form.association :friend, selected: params[:friend] %>
+    <%=   form.input :start_date, html5: true %>
+    <%=   form.input :end_date, html5: true %>
+    <%=   form.button :submit, class: "form-button" %>
+    <%= link_to "< Back to my bookings", bookings_path %>
+  </div>
   <% end %>
 </div>
