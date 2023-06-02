@@ -15,7 +15,7 @@
           <h4>My Booking with : </h4>
           <h5><%= booking.friend.name %></h5>
           <p>From : <%= booking.start_date %><br/>To : <%= booking.end_date %></p>
-          <%= link_to "Cancel Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+          <%= link_to "Cancel Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
         </div>
       </div>
     <% end %>

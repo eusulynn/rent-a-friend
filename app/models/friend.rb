@@ -6,7 +6,7 @@ class Friend < ApplicationRecord
   has_many :users, through: :bookings
 
   GENDER_OPTIONS = ["Male", "Female", "Non-Binary", "Prefer not to say"]
-  LANGUAGE_OPTIONS = ["English", "Japanese", "French", "Italian", "Spanish", "Cantonese", "Russian"]
+  LANGUAGE_OPTIONS = ["English", "Japanese", "French", "Italian", "Spanish", "Cantonese", "Russian", "Nepali", "Norwegian", "Filipino", "Tamil", "Cantonese"]
 
   validates :location, presence: true
   validates :price, presence: true, numericality: { in: (10..45), only_integer: true }
