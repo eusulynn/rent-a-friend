@@ -1,7 +1,7 @@
-<div class="container-center">
-  <%= image_tag "logo.svg", class: "logo-login" %>
+<div class="container-center-dark">
+  <%= image_tag "logo.svg", class: "logo-big" %>
 
-  <h2 class="login-title">Rent a Friend: Log in</h2>
+  <h2 class="form-title">Rent a Friend: Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-transparent">
         <%= f.input :email,
@@ -17,11 +17,11 @@
                     placeholder: "Password",
                     label: false,
                     input_html: { class: "text-input" } %>
-        <div class="login-links">
+        <div class="form-links">
         <%= f.input :remember_me, as: :boolean %>
         <%= link_to "Forgot your password?", new_password_path(resource_name) %>
         </div>
-        <%= f.button :submit, "Log in", class: "login-button" %>
+        <%= f.button :submit, "Log in", class: "form-button" %>
       </div>
     <% end %>
 

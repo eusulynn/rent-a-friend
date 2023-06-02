@@ -2,9 +2,6 @@
   <div class="title">
     <h1>My Bookings</h1>
   </div>
-
-    <%= link_to "Make a new booking", new_booking_path, class: "btn btn-primary" %>
-
   <div class="cards">
     <% @bookings.each do |booking| %>
     <div class="card">
@@ -18,4 +15,3 @@
     <% end %>
   </div>
 </div>
- 

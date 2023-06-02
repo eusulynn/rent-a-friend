@@ -1,5 +1,4 @@
   <div class="friends-container">
-
     <div class="card">
       <div class="img-bx">
         <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
@@ -8,9 +7,14 @@
         <div class="detail">
           <h2><%=@friend.name  %><br /><span> Age: <%= @friend.age %></span><br><span>Price: $<%= @friend.price %></span></h2>
           <p>I am located in <%= @friend.location %> and speak <%= @friend.language %></p>
-
         </div>
       </div>
     </div>
     <div class="description"><h3>"<%= @friend.description %>"</h3></div>
   </div>
+  <% if @friend.user == current_user%>
+    <%= link_to "Remove Friend :(", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+  <% end %>
+    <br>
+    <%= link_to "Book This Friend!",  new_booking_path(friend: @friend), class: "btn btn-primary" %>
+</div>

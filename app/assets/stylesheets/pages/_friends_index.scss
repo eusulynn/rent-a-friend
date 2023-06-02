@@ -5,12 +5,12 @@
 
 .friends-semi-circle {
   position: fixed;
-  z-index: -1;
-  left: -500px;
-  top: -200px;
+  z-index: 2;
+  top: -20vw;
+  left: -50vw;
   background-color: $dark-blue;
-  width: 1250px;
-  height: 1300px;
+  width: 100vw;
+  height: 100vw;
   border-radius: 50%;
 }
 
@@ -23,6 +23,7 @@
   width: 40%;
   overflow: scroll;
   overflow-x: hidden;
+  z-index: 3;
 
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
@@ -49,9 +50,11 @@
 
 .friend-overview {
   color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
   a {
+    font-family: $headers-font;
     color: white;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: bold;
     text-decoration: none;
   }
@@ -63,14 +66,29 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  z-index: -2;
+  z-index: 1;
 
   h1 {
     color: $dark-blue;
-    font-family: Helvetica, sans-serif;
-    font-size: 128px;
+    font-size: 13em;
     font-weight: bold;
     line-height: 0.85;
-    z-index: 1;
+    animation: disappear 10s forwards;
+    z-index: -2;
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2
   }
 }
