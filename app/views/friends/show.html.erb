@@ -1,9 +1,5 @@
   <div class="friends-container">
-    <div class="friends-index-map"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+
     <div class="card">
       <div class="img-bx">
         <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill %>
@@ -16,4 +12,5 @@
         </div>
       </div>
     </div>
+    <div class="description"><h3>"<%= @friend.description %>"</h3></div>
   </div>
