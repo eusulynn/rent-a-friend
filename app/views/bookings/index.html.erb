@@ -1,17 +1,23 @@
 <div class="container">
   <div class="title">
-    <h1>My Bookings</h1>
+     <h2>My Bookings :</h2>
   </div>
-  <div class="cards">
+  <div style="width: 100%;">
     <% @bookings.each do |booking| %>
-    <div class="card">
-      <div class="card-content">
-      <h2>Booked with: <%= booking.friend.name %></h2>
-      <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
-      <%= link_to "Cancel booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger mb-2" %>
-      </div>
-    <div>
+      <div class="col">
+        <div class="card">
+          <div class="cards mt-5" style="width: 20rem;">
+            <%= cl_image_tag booking.friend.photo.key,  crop: :fill, class: "avatar booking-image" %>
+          </div>
+        </div>
 
+        <div class="booking-details">
+          <h4>My Booking with : </h4>
+          <h5><%= booking.friend.name %></h5>
+          <p>From : <%= booking.start_date %><br/>To : <%= booking.end_date %></p>
+          <%= link_to "Cancel Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
