@@ -5,6 +5,20 @@
     </div>
 
     <div class="navbar-group">
+      <%= form_with url: friends_path, method: :get do %>
+      <div class="form-transparent", style="flex-direction: row; margin-bottom: 0px;">
+        <%= text_field_tag :query,
+          params[:query],
+          placeholder: "Location, language, age, nane, etc.",
+          style: "width: 25em;",
+          class: "form-control"
+        %>
+        <%= submit_tag "Filter", class: "primary-button" %>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="navbar-group">
       <%= link_to "Become a friend!", new_friend_path, class: "primary-button" %>
       <% if user_signed_in? %>
         <%= link_to "My Bookings", bookings_path, class: "nav-link" %>

@@ -6,7 +6,7 @@ class Friend < ApplicationRecord
   has_many :users, through: :bookings
 
   GENDER_OPTIONS = ["Male", "Female", "Non-Binary", "Prefer not to say"]
-  LANGUAGE_OPTIONS = ["English", "Japanese", "French", "Italian", "Spanish", "Cantonese", "Russian"]
+  LANGUAGE_OPTIONS = ["English", "Japanese", "French", "Italian", "Spanish", "Cantonese", "Russian", "Nepali", "Norwegian", "Filipino", "Tamil"]
 
   validates :location, presence: true
   validates :price, presence: true, numericality: { in: (10..45), only_integer: true }
@@ -20,4 +20,11 @@ class Friend < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
+  include PgSearch::Model
+
+  pg_search_scope :search_text_fields,
+  against: [ :language, :gender, :name, :location ],
+  using: {
+    tsearch: { prefix: true }
+  }
 end

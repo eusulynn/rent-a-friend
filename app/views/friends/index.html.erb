@@ -2,24 +2,28 @@
   <div class="friends-semi-circle">
   </div>
   <div class="friend-cards">
-      <% @friends.each_with_index do |friend, index| %>
+      <% unless @friends.nil?%>
+        <% @friends.each_with_index do |friend, index|  %>
         <% if index.even? %>
           <div class="friend-card left-align">
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
             <div class="friend-overview">
-              <%= link_to friend.name, friend_path(friend) %>
+              <%= link_to "#{friend.name}, #{friend.location}", friend_path(friend) %>
+              <p>Age: <%= friend.age %></p>
               <p><%= friend.description %></p>
             </div>
           </div>
         <% else %>
           <div class="friend-card right-align">
             <div class="friend-overview">
-              <%= link_to friend.name, friend_path(friend) %>
+              <%= link_to "#{friend.name}, #{friend.location}", friend_path(friend) %>
+              <p>Age: <%= friend.age %></p>
               <p><%= friend.description %></p>
             </div>
             <%= cl_image_tag friend.photo.key,  crop: :fill, class: "avatar" %>
           </div>
           <% end %>
+        <% end %>
       <% end %>
   </div>
   <div class="friends-index-map"
