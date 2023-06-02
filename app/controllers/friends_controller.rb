@@ -30,6 +30,12 @@ class FriendsController < ApplicationController
 
   def show
     @friend = Friend.find(params[:id])
+    @marker =
+      [{
+        lat: @friend.latitude,
+        lng: @friend.longitude,
+        marker_html: render_to_string(partial: "marker")
+      }]
   end
 
   def new
